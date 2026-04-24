@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Spoon Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slide-line {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+.slide-line:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.slide-line:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.slide-line:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff3e6;
+}
+
+#about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Menu Section */
+#menu {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#menu h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.menu-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px 0;
+}
+
+.menu-item p {
+  margin-bottom: 10px;
+  color: #ff7f50;
+  font-weight: bold;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff3e6;
+}
+
+#contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="images/rest.backgroung.img.png" alt="" class="hero-img">
+    <div class="hero-text">
+      <h1>Golden Spoon Kitchen</h1>
+      <p>Delicious meals, served fresh!</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Golden Spoon Kitchen offers a variety of delightful dishes prepared with love and fresh ingredients. Perfect for family meals, casual dining, or quick bites.</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+
+      <div class="menu-item">
+        <img src="images/jollof rice.png" alt="Spicy Jollof Rice">
+        <h3>Spicy Jollof Rice</h3>
+        <p>₦2,500</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/grilled chicken.png" alt="Grilled Chicken">
+        <h3>Grilled Chicken</h3>
+        <p>₦3,000</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/fried plantain.png" alt="Fried Plantains">
+        <h3>Fried Plantains</h3>
+        <p>₦1,500</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/pepper soup.png" alt="Pepper Soup">
+        <h3>Pepper Soup</h3>
+        <p>₦2,000</p>
+      </div>
+
+       <div class="menu-item">
+        <img src="images/spaghetti.png" alt="pasta">
+        <h3>pasta</h3>
+        <p>₦2,500</p>
+      </div>
+
+       <div class="menu-item">
+        <img src="images/stir fried noodle.png" alt="stir fried noodles">
+        <h3>stir fried noodles</h3>
+        <p>₦4,000</p>
+      </div>
+
+       <div class="menu-item">
+        <img src="images/sushi.png" alt="sushi">
+        <h3>sushi</h3>
+        <p>₦2,000</p>
+      </div>
+
+       <div class="menu-item">
+        <img src="images/veggie burgers.png" alt="veggie burger">
+        <h3>veggie burger</h3>
+        <p>₦2,000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Address: 123 Food Street, Lagos</p>
+    <p>Email: contact@goldenspoon.com</p>
+    <p>Phone: +234 800 123 4567</p>
+  </section>
+
+</body>
+</html>
